@@ -12,11 +12,13 @@ class Config extends \Magento\Backend\App\Action
 
     public function __construct(Action\Context $context, PageFactory $pageFactory)
     {
+        $this->_pageFactory = $pageFactory;
         parent::__construct($context);
     }
 
     public function execute()
     {
+        echo 123;
         return $this->_pageFactory->create();
     }
 }
